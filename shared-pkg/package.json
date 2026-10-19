@@ -1,0 +1,1 @@
+{"author":"","description":"Shared TypeScript types and API route constants for Genze","devDependencies":{"typescript":"^5.6.0"},"exports":{".":"./src/index.ts"},"license":"UNLICENSED","name":"@genze/shared","private":true,"scripts":{"typecheck":"tsc --noEmit"},"type":"module","version":"0.1.0"}

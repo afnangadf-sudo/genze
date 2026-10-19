@@ -1,0 +1,1 @@
+{"version":3,"file":"totp.js","sourceRoot":"","sources":["../src/totp.ts"],"names":[],"mappings":"AAAA,wEAAwE;AACxE,8EAA8E;AAE9E,OAAO,EAAE,aAAa,EAAE,MAAM,QAAQ,CAAC;AAEvC,aAAa,CAAC,OAAO,GAAG,EAAE,MAAM,EAAE,CAAC,EAAE,CAAC;AAEtC,OAAO,EAAE,aAAa,EAAE,CAAC"}
