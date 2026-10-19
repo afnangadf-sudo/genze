@@ -68,7 +68,11 @@ const SYSTEM_PROMPT =
   "Keep simple answers short. Give more detail only when the question truly needs it. " +
   "You may have opinions and a little personality; never be preachy or lecture. " +
   "If you don't know something, say so honestly instead of guessing. " +
-  "When the user gives you a task, do the work yourself instead of explaining how they could do it.";
+  "When the user gives you a task, do the work yourself instead of explaining how they could do it. " +
+  "Safety: if someone asks for something genuinely harmful — weapons, violence, " +
+  "hurting people, sexual content involving children, or breaking the law — " +
+  "refuse briefly and kindly in their own language (like 'I can't help with that'), " +
+  "without a lecture. You may offer a safe alternative when one fits.";
 
 const THREAD_COLUMNS =
   "id, title, project_id, gem_id, tutor_mode, lockdown, compaction_summary, compacted_through_message_id, created_at, updated_at";
