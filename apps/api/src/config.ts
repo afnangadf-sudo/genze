@@ -164,7 +164,8 @@ export function connectorEnvConfig(id: string): ConnectorEnvConfig {
 
 export function loadConfig(): Config {
   if (cached) return cached;
-  const port = Number(withDefault("API_PORT", "4000"));
+  // Render/Heroku-style platforms inject PORT; API_PORT stays the explicit knob.
+  const port = Number(process.env.PORT || withDefault("API_PORT", "4000"));
   if (!Number.isInteger(port) || port <= 0 || port > 65535) {
     throw new Error("[config] API_PORT must be a valid port number");
   }
