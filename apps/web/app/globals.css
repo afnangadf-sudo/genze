@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-stone-50 text-stone-800 antialiased dark:bg-stone-950 dark:text-stone-200;
+}
+
+/* Per-language type. The <html lang> attribute is the hook (set by
+   LangProvider and the pre-paint boot script in layout.tsx). */
+
+/* Urdu (RTL): Nastaliq, with room to breathe */
+html[lang="ur"] body {
+  font-family: var(--font-urdu), var(--font-sans), system-ui, sans-serif;
+  line-height: 2.2;
+}
+
+/* Arabic (RTL): Naskh */
+html[lang="ar"] body {
+  font-family: var(--font-arabic), var(--font-sans), system-ui, sans-serif;
+  line-height: 2;
+}
+
+/* Persian/Farsi (RTL): Vazirmatn */
+html[lang="fa"] body {
+  font-family: var(--font-fa), var(--font-sans), system-ui, sans-serif;
+  line-height: 1.9;
+}
+
+::selection {
+  background: #c2613e33;
+}

@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "android": {
+      "compileSdkVersion": 36,
+      "minSdkVersion": 24,
+      "package": "app.genze.mobile",
+      "permissions": [
+        "RECORD_AUDIO"
+      ],
+      "targetSdkVersion": 36
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "app.genze.mobile",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Genze uses the microphone for voice chat and voice notes."
+      },
+      "privacyManifests": {
+        "NSPrivacyAccessedAPICategoryUserDefaults": [
+          {
+            "NSPrivacyAccessedAPITypeReasons": [
+              "CA92.1"
+            ]
+          }
+        ]
+      },
+      "supportsTablet": true
+    },
+    "name": "Genze",
+    "icon": "./assets/icon.png",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "plugins": [
+      "expo-router",
+      "expo-apple-authentication",
+      "expo-secure-store"
+    ],
+    "scheme": "genze",
+    "slug": "genze",
+    "userInterfaceStyle": "automatic",
+    "version": "1.0.0"
+  }
+}

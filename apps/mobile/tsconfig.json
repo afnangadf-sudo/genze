@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "lib": ["es2022", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022",
+    "baseUrl": ".",
+    "paths": {
+      // Standalone typecheck mapping. At real install time the pnpm
+      // workspace links @genze/shared (workspace:* in package.json) and
+      // Metro resolves it via metro.config.js watchFolders.
+      "@genze/shared": ["../../packages/shared/src/index.ts"]
+    },
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "include": ["app", "lib", "types", "babel.config.js", "metro.config.js"]
+}

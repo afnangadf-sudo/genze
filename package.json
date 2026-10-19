@@ -1,0 +1,1 @@
+{"name":"genze","packageManager":"pnpm@10.15.0","private":true,"scripts":{"build":"pnpm -r build","dev":"pnpm --parallel -r dev","migrate":"pnpm --filter @genze/api migrate","test":"pnpm -r test","typecheck":"pnpm -r typecheck"},"version":"0.1.0"}
