@@ -32,6 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: BOOT_SCRIPT }} />
+        {/* Runtime config (API URL) injected by the host — see public/runtime-config.js */}
+        <script src="/runtime-config.js" />
       </head>
       <body>
         <ThemeProvider>

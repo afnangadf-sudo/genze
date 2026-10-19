@@ -4,9 +4,13 @@
 import { API_ROUTES, type ApiErrorBody, type ApiResponse } from "@genze/shared";
 
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL && process.env.NEXT_PUBLIC_API_URL.length > 0
+  // Runtime override injected by the host (public/runtime-config.js) — lets
+  // the same build point at any API without rebuilding.
+  (typeof window !== "undefined" &&
+    (window as unknown as { __GENZE_API_URL?: string }).__GENZE_API_URL) ||
+  (process.env.NEXT_PUBLIC_API_URL && process.env.NEXT_PUBLIC_API_URL.length > 0
     ? process.env.NEXT_PUBLIC_API_URL
-    : "http://localhost:4000";
+    : "http://localhost:4000");
 
 const ACCESS_KEY = "genze_access";
 const REFRESH_KEY = "genze_refresh";
